@@ -1,24 +1,32 @@
-@import url(../../lib/font/source-sans-pro/source-sans-pro.css);
 /**
  * White theme for reveal.js. This is the opposite of the 'black' theme.
  *
  * Copyright (C) 2015 Hakim El Hattab, http://hakim.se
  */
 section.has-dark-background, section.has-dark-background h1, section.has-dark-background h2, section.has-dark-background h3, section.has-dark-background h4, section.has-dark-background h5, section.has-dark-background h6 {
-  color: #fff; }
+  color: #C5E0DC; }
 
 /*********************************************
  * GLOBAL STYLES
  *********************************************/
 body {
-  background: #fff;
-  background-color: #fff; }
+  background: #fff; }
+  body:before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: url(../../img/bg.jpg);
+    opacity: 0.5; }
 
 .reveal {
-  font-family: 'Source Sans Pro', Helvetica, sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 38px;
   font-weight: normal;
-  color: #222; }
+  color: #D07E47; }
 
 ::selection {
   color: #fff;
@@ -34,8 +42,8 @@ body {
  *********************************************/
 .reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
   margin: 0 0 20px 0;
-  color: #222;
-  font-family: 'Source Sans Pro', Helvetica, sans-serif;
+  color: #D05847;
+  font-family: 'Roboto', sans-serif;
   font-weight: 600;
   line-height: 1.2;
   letter-spacing: normal;
@@ -202,7 +210,7 @@ body {
 .reveal section img {
   margin: 15px 0px;
   background: rgba(255, 255, 255, 0.12);
-  border: 4px solid #222;
+  border: 4px solid #D07E47;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.15); }
 
 .reveal a img {
@@ -259,3 +267,7 @@ body {
  *********************************************/
 .reveal .slide-number {
   color: #2a76dd; }
+
+.reveal .frontic-me {
+  border-radius: 50%;
+  border: 24px solid #D07E47; }

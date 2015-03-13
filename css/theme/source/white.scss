@@ -12,18 +12,17 @@
 
 
 // Include theme-specific fonts
-@import url(../../lib/font/source-sans-pro/source-sans-pro.css);
+// @import url(../../lib/font/source-sans-pro/source-sans-pro.css);
 
 
 // Override theme settings (see ../template/settings.scss)
 $backgroundColor: #fff;
 
-$mainColor: #222;
-$headingColor: #222;
-
+$mainColor: #D07E47;
+$headingColor: #D05847;
 $mainFontSize: 38px;
-$mainFont: 'Source Sans Pro', Helvetica, sans-serif;
-$headingFont: 'Source Sans Pro', Helvetica, sans-serif;
+$mainFont: 'Roboto', sans-serif;
+$headingFont: 'Roboto', sans-serif;
 $headingTextShadow: none;
 $headingLetterSpacing: normal;
 $headingTextTransform: uppercase;
@@ -39,7 +38,7 @@ $heading4Size: 1.0em;
 
 section.has-dark-background {
 	&, h1, h2, h3, h4, h5, h6 {
-		color: #fff;
+		color: #C5E0DC;
 	}
 }
 
@@ -47,3 +46,16 @@ section.has-dark-background {
 // Theme template ------------------------------
 @import "../template/theme";
 // ---------------------------------------------
+
+
+
+
+
+// My style
+.reveal {
+	.frontic-me {
+		border-radius: 50%;
+		border: 24px solid #D07E47;
+	}
+
+}

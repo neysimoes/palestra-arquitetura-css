@@ -9,8 +9,17 @@
  * GLOBAL STYLES
  *********************************************/
 body {
-  background: #111;
-  background-color: #111; }
+  background: #111; }
+  body:before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: url(../../img/bg.jpg);
+    opacity: 0.5; }
 
 .reveal {
   font-family: 'Open Sans', sans-serif;
@@ -32,7 +41,7 @@ body {
  *********************************************/
 .reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
   margin: 0 0 20px 0;
-  color: #eee;
+  color: #C5E0DC;
   font-family: 'Montserrat', Impact, sans-serif;
   font-weight: normal;
   line-height: 1.2;
