@@ -21,16 +21,6 @@ body {
   background: -o-radial-gradient(center, circle cover, #626262 0%, #222 100%);
   background: -ms-radial-gradient(center, circle cover, #626262 0%, #222 100%);
   background: radial-gradient(center, circle cover, #626262 0%, #222 100%); }
-  body:before {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background: url(../../img/bg.jpg);
-    opacity: 0.5; }
 
 .reveal {
   font-family: Ubuntu, 'sans-serif';
@@ -52,7 +42,7 @@ body {
  *********************************************/
 .reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
   margin: 0 0 20px 0;
-  color: #C5E0DC;
+  color: #4b3f34;
   font-family: Ubuntu, 'sans-serif';
   font-weight: normal;
   line-height: 1.2;

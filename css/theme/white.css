@@ -4,29 +4,19 @@
  * Copyright (C) 2015 Hakim El Hattab, http://hakim.se
  */
 section.has-dark-background, section.has-dark-background h1, section.has-dark-background h2, section.has-dark-background h3, section.has-dark-background h4, section.has-dark-background h5, section.has-dark-background h6 {
-  color: #C5E0DC; }
+  color: #4b3f34; }
 
 /*********************************************
  * GLOBAL STYLES
  *********************************************/
 body {
   background: #fff; }
-  body:before {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background: url(../../img/bg.jpg);
-    opacity: 0.5; }
 
 .reveal {
   font-family: 'Roboto', sans-serif;
   font-size: 38px;
   font-weight: normal;
-  color: #D07E47; }
+  color: #4b3f34; }
 
 ::selection {
   color: #fff;
@@ -42,7 +32,7 @@ body {
  *********************************************/
 .reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
   margin: 0 0 20px 0;
-  color: #D05847;
+  color: #4b3f34;
   font-family: 'Roboto', sans-serif;
   font-weight: 600;
   line-height: 1.2;
@@ -210,7 +200,7 @@ body {
 .reveal section img {
   margin: 15px 0px;
   background: rgba(255, 255, 255, 0.12);
-  border: 4px solid #D07E47;
+  border: 4px solid #4b3f34;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.15); }
 
 .reveal a img {
@@ -269,5 +259,11 @@ body {
   color: #2a76dd; }
 
 .reveal .frontic-me {
-  border-radius: 50%;
-  border: 24px solid #D07E47; }
+  border: none; }
+
+.slide-background.favela {
+  background: url(../../img/rocinha2.jpg) no-repeat !important;
+  opacity: 0.5 !important; }
+
+.favela h1 {
+  color: #000; }
