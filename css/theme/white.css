@@ -260,15 +260,32 @@ body {
 
 .reveal .frontic-me {
   border: none; }
-
-.slide-background.favela {
+.reveal .slide-background.favela {
   background: url(../../img/rocinha2.jpg) no-repeat !important;
   opacity: 0.5 !important; }
-
-.favela h1 {
+.reveal .favela h1 {
   color: #000; }
-
-.border-none {
+.reveal .border-none {
   border: 0 !important;
   box-shadow: none !important;
   background: none !important; }
+.reveal footer {
+  position: absolute;
+  bottom: 0;
+  left: 30px;
+  width: 100%;
+  font-size: 20px;
+  color: #7B7672; }
+.reveal code {
+  padding: 20px; }
+.reveal .col {
+  float: left;
+  display: inline-block;
+  height: 100%;
+  position: relative; }
+.reveal .col-50 {
+  width: 50%; }
+.reveal .col-60 {
+  width: 60%; }
+.reveal .col-40 {
+  width: 40%; }

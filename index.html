@@ -40,13 +40,13 @@
 
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
-				<section class="intro" data-background="#deb146">
+				<section class="intro">
 					<h1>Arquitetura CSS</h1>
 					<h3>Ney Simões</h3>
 				</section>
 
 				<section>
-					<img src="img/ney-photo.jpeg" class="frontic-me" alt="">
+					<img src="img/ney-photo.jpeg" class="border-none" style="max-width:75%" alt="">
 					<p>
 						Ney Simões
 					</p>
@@ -54,27 +54,57 @@
 				<section data-background="img/logo-larger.jpg" data-background-repeat="no-repeat" data-background-size="300px">
 					
 				</section>
-				<section data-background="#84dbd7">
+				<section>
 					<h2>Cascading Style Sheets (CSS)</h2>
-					<img src="img/bob-esponja.gif" height="325" width="483" alt="">
+					<img src="img/bob-esponja.gif" class="border-none" style="max-width:75%"  alt="">
 				</section>
-				<section class="favela">
+				<section>
 					<h1>
 						Para que padrões?
 					</h1>
+					<img src="img/rocinha2.jpg" class="border-none" style="max-width:60%" alt="">
 				</section>
 				<section class="oocss">
-					<h2>OOCSS</h2>
+					<h1>OOCSS</h1>
 					<p>CSS orientado a objetos</p>
-					<ul>
-						<li>Separa estrutura da <em>skin</em></li>						
-						<li></li>
-						<li></li>
-						<li></li>
-					</ul>
-					<pre>
-						
-					</pre>
+				</section>
+				<section>
+					<h3>Separa a estrutura da <em>skin <small>*</small></em></h3>
+					<iframe id="cp_embed_azXdrg" src="//codepen.io/neysimoes/embed/azXdrg?height=296&amp;theme-id=0&amp;slug-hash=azXdrg&amp;default-tab=result&amp;user=neysimoes" scrolling="no" frameborder="0" height="296" allowtransparency="true" allowfullscreen="true" class="cp_embed_iframe undefined" style="width: 100%; overflow: hidden;"></iframe>
+				</section>
+				<section>
+					<h3>Separa conteúdo de contexto</h3>
+					<div class="col col-60">
+						<pre><code class="html" data-trim contenteditable>
+<header>
+  <div class="header-inside globalwidth"></div>
+</header>
+
+<div class="main globalwidth"></div>
+
+<footer>
+  <div class="footer-inside globalwidth"></div>
+</footer>
+						</code></pre>
+					</div>
+					<div class="col col-40">
+						<pre><code class="css" data-trim contenteditable>
+.globalwidth {
+	width: 980px;
+	margin: 0 auto;
+	position: relative;
+	padding-left: 20px;
+	padding-right: 20px;
+	overflow: hidden;
+}
+
+.header-inside {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	height: 260px;
+}
+						</code></pre>
+					</div>
 				</section>
 				<section class="smacss">
 					<h2>Smacss</h2>
@@ -104,7 +134,6 @@
 					<img src="img/ionic-angular-sass.png" class="border-none" alt="">
 				</section>
 			</div>
-
 		</div>
 
 		<script src="lib/js/head.min.js"></script>
