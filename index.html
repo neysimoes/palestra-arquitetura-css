@@ -107,30 +107,121 @@
 					</div>
 				</section>
 				<section class="smacss">
-					<h2>Smacss</h2>
+					<h1>Smacss</h1>
+					<img src="img/smacss.png" class="border-none" alt="">
+					<p>Yahoo! Mail</p>
+				</section>
+				<section class="smacss">
+					<h2>Base</h2>
 					<ul>
-						<li></li>
-						<li></li>
-						<li></li>
+						<li>Não utilizam seletores com classes ou ids</li>
+						<li>CSS Reset ou normalize.css</li>
+					</ul>
+				</section>
+				<section class="smacss layout cf">
+					<h2>Layout</h2>
+					<div class="col col-40">
+						<pre><code>
+#article {
+    float: left;
+}
+
+#sidebar {
+    float: right;
+}
+
+.l-flipped #article {
+    float: right;
+}
+
+.l-flipped #sidebar {
+    float: left;
+}
+						</code></pre>
+					</div>
+					<div class="col col-20 center">
+						<img src="img/pr_arrow.png" class="border-none arrow" alt="">
+					</div>
+					<div class="col col-40 right">
+						<pre><code>
+#article {
+    width: 80%;
+    float: left;
+}
+
+#sidebar {
+    width: 20%;
+    float: right;
+}
+
+.l-fixed #article {
+    width: 600px;
+}
+
+.l-fixed #sidebar {
+    width: 200px;
+}
+						</code></pre>
+					</div>
+				</section>
+				<section class="smacss">
+					<h2>Module</h2>
+					<div class="col col-60">
+						<pre><code>
+<div class="pod pod-constrained">...</div>
+<div class="pod pod-callout">...</div> 
+						</code></pre>
+					</div>
+					<div class="col col-40">
+						<pre><code>
+.pod { 
+    width: 100%; 
+} 
+.pod input[type=text] { 
+    width: 50%; 
+}
+.pod-constrained input[type=text] { 
+    width: 100%; 
+}
+
+.pod-callout { 
+    width: 200px; 
+}
+.pod-callout input[type=text] { 
+    width: 180px; 
+}
+						</code></pre>
+					</div>
+				</section>
+				<section class="smacss">
+					<h2>State</h2>
+					<ul>
+						<li><samp>.is-</samp></li>
+						<li><samp>.is-active</samp></li>
+						<li><samp>.is-collapsed</samp></li>
+						<li><samp>.is-current</samp></li>
+					</ul>
+				</section>
+				<section class="BEM">
+					<h1>BEM</h1>
+					<p>block, element, modifier</p>
+				</section>
+				<section class="bem">
+					<h3>Esqueça seus preconceitos com os caracteres duplos de hifen e sublinhado</h3>
+					<ul>
+						<li><samp>.formcontent</samp> (elemento pai)</li>
+						<li><samp>.formcontent__field</samp> (elemento filho)</li>
+						<li><samp>.formcontent__field--first</samp> (elemento filho modificado)</li>
 					</ul>
 				</section>
 				<section class="bem">
-					<h2>BEM</h2>
-					<ul>
-						<li></li>
-						<li></li>
-						<li></li>
-					</ul>
-				</section>
-				<section class="dry">
-					<h2>DRY</h2>
-					<ul>
-						<li></li>
-						<li></li>
-						<li></li>
-					</ul>
+					<h3>
+						Filesystem
+					</h3>
+					<img src="img/bem-filesystem.png" class="border-none" alt="">
 				</section>
 				<section>
+					<h1>Mundo real</h1>
 					<img src="img/ionic-angular-sass.png" class="border-none" alt="">
 				</section>
 			</div>
