@@ -40,193 +40,248 @@
 
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
-				<section class="intro">
-					<h1>Arquitetura CSS</h1>
-					<h3>Ney Simões</h3>
+				<section>
+					<h1>ARQUITETURA CSS 2.0</h1>
+					<h4>Previsível, reutilizável, sustentável e escalável</h4>
 				</section>
-
 				<section>
 					<img src="img/ney-photo.jpeg" class="border-none" style="max-width:75%" alt="">
 					<p>
 						Ney Simões
 					</p>
 				</section>
-				<section data-background="img/logo-larger.jpg" data-background-repeat="no-repeat" data-background-size="300px">
-					
+				<section>
+					<section data-background="img/css.gif" data-background-repeat="repeat" data-background-size="400px">
+						<h1 style="color: white">Problemática</h1>
+					</section>
+					<section>
+						<h2>O que é considerado bom?</h2>
+						<ul>
+							<li>Reproduzir o PSD com perfeição (Pixel Perfect)</li>
+							<li>Tableless</li>
+							<li>Usar o mínimo de imagens</li>
+							<li>CSS3 e todos seus recursos</li>
+							<li>Pré-processadores</li>
+							<li>Seletores HTML5</li>
+						</ul>
+					</section>
+					<section>
+						<h2>O que falta então?</h2>
+						<ul>
+							<li>Código legível</li>
+							<li>Fácil alteração ou ampliação</li>
+							<li>Modular</li>
+							<li>Escalável</li>
+						</ul>
+					</section>
 				</section>
 				<section>
-					<h2>Cascading Style Sheets (CSS)</h2>
-					<img src="img/bob-esponja.gif" class="border-none" style="max-width:75%"  alt="">
+					<section data-background="img/metodologias-black.jpg" data-background-repeat="no-repeat">
+						<h1 style="color: white">Metas da boa arquitetura CSS</h1>
+					</section>
+					<section>
+						<h2>Previsível</h2>
+						<p>As regras são claras ao ponto dos comportamentos serem previsíves quando utilizados. Adicionar mais estilos deve ser feito de forma fluida seguindo o padrão de toda a aplicação. Alterar ou adicionar estilos não deve afetar outras partes da aplicação.</p>
+					</section>
+					<section>
+						<h2>Reutilizável</h2>
+						<p>As regras devem ser abstraídas e desassociadas ao ponto de você poder reutiliza-las. Usando estilos já existentes para novos componentes.</p>
+					</section>
+					<section>
+						<h2>Sustentável</h2>
+						<p>Quando precisar alterar, adicionar ou reorganizar o conteúdo do seu site, isso não deve exigir refatoração no código existente. Adicionar um novo componente a uma página existente não deve afetar os componentes existentes.</p>
+					</section>
+					<section>
+						<h2>Escalável</h2>
+						<p>É difícil admitir, mas o projeto cresce e mais desenvolvedores serão adicionados a sua equipe. Não importa se é uma ou cem pessoas o CSS deve ser facilmente gerido por todos envolvidos.</p>
+					</section>
 				</section>
 				<section>
-					<h1>
-						Para que padrões?
-					</h1>
-					<img src="img/rocinha2.jpg" class="border-none" style="max-width:60%" alt="">
-				</section>
-				<section class="oocss">
-					<h1>OOCSS</h1>
-					<p>CSS orientado a objetos</p>
+					<section>
+						<h2>Erros comuns</h2>
+						<img src="img/assim-esta-bom.gif" class="border-none" style="height:auto; width:100%;" alt="">
+					</section>
+					<section>
+						<h3>Estilizar usando elemento pai</h3>
+						<p>O erro comum é usar o emento pai para determinar o contexto.</p>
+						<pre><code class="css">
+.component {
+	background: green;
+	border: 1px solid #ddd;
+	border-radius: 3px;
+}
+#header .component {
+	height: 50px;
+}
+div.menu .component {
+	background: yellow;
+}
+						</code></pre>
+					</section>
+					<section>
+						<h3>Complicar sem necessidade</h3>
+						<pre><code class="css">
+#header .menu > li { ... }
+
+#header .menu li li .link { ... }
+
+.wrapper h1:first-child span { ... }
+
+.form-input-text-login-top { ... }
+						</code></pre>
+					</section>
+					<section>
+						<h3>Classes absurdamente genéricas</h3>
+						<pre><code class="html">
+<div class="post">
+  <h1 class="title">Um título legal</h1>
+  <p class="content">Lorem ipsum dolor sit amet...</p>
+  <a class="link" href="#">http://sitelegal.com.br</a>
+</div>
+						</code></pre>
+						<pre><code class="css">
+.post { ... }
+.post .title { ... }
+.post .content { ... }
+.post .link { ... }
+						</code></pre>
+					</section>
 				</section>
 				<section>
-					<h3>Separa a estrutura da <em>skin <small>*</small></em></h3>
-					<iframe id="cp_embed_azXdrg" src="//codepen.io/neysimoes/embed/azXdrg?height=296&amp;theme-id=0&amp;slug-hash=azXdrg&amp;default-tab=result&amp;user=neysimoes" scrolling="no" frameborder="0" height="296" allowtransparency="true" allowfullscreen="true" class="cp_embed_iframe undefined" style="width: 100%; overflow: hidden;"></iframe>
+					<section data-background="img/partes-black.jpg" data-background-repeat="no-repeat">
+						<h1 style="color: #fff">Entendendo as partes</h1>
+					</section>
+					<section>
+						<h3>Bloco ou componente</h3>
+						<img src="img/bem/block.png" class="border-none" height="240" width="818" alt="">
+						<p><strong>Um bloco é uma entidade independente</strong>, um "bloco de construção" de uma aplicação. Um bloco pode ser simples ou composto (contendo outros blocos).</p>
+					</section>
+					<section>
+						<h3>Elemento</h3>
+						<img src="img/bem/block-nav.png" class="border-none" height="377" width="617" alt="">
+						<p><strong>Um elemento é uma parte de um bloco que executa uma certa função.</strong> Elementos são dependentes do contexto: eles só fazem sentido no contexto do bloco a que pertencem.</p>
+					</section>
+					<section>
+						<h3>Modificador</h3>
+						<img src="img/bem/modifier.png" class="border-none" height="600" width="1024" alt="">
+						<p>O uso do modificador é opcional. Basicamente você cria um bloco e mudando o modificador você muda a aparência dele.</p>
+					</section>
 				</section>
 				<section>
-					<h3>Separa conteúdo de contexto</h3>
-					<div class="col col-60">
-						<pre><code class="html" data-trim contenteditable>
-<header>
-  <div class="header-inside globalwidth"></div>
-</header>
+					<section data-background="img/solutions-black.jpg" data-background-repeat="no-repeat">
+						<h1 style="color: #fff">Soluções</h1>
+					</section>
+					<section>
+						<svg xmlns="http://www.w3.org/2000/svg" width="500px" height="500px" viewBox="0 0 101.7 84" enable-background="new 0 0 101.7 84"><path d="M0 13h23.8v7h-23.8zm0-13h23.8v7h-23.8zm42.7 25.9h-42.7v7h41.1c4.5 0 15 .1 18.9 6.4v-3.9c-1.9-6.2-7.5-9.5-17.3-9.5zm.1 13h-42.8v7h41.1c10 0 16.3.4 18.9 1.8v-3.1c-2-4.9-10.4-5.7-17.2-5.7zm-.1 33h-42.7v-7h41.1c4.5 0 15-.1 18.9-6.4v3.9c-1.9 6.2-7.5 9.5-17.3 9.5zm.1-13h-42.8v-7h41.1c10 0 16.3-.4 18.9-1.8v3.1c-2 4.9-10.4 5.7-17.2 5.7zm27.6 25.1h31.4v-4.3h-30.5c-2.7 0-9.1-.1-11.4-3.8v2.4c1.1 3.7 4.5 5.7 10.5 5.7zm-.1-7.9h31.4v-4.3h-30.4c-6.1 0-9.9-.2-11.4-1.1v1.9c1.2 3 6.3 3.5 10.4 3.5z" fill="#010101"/></svg>
+						<h3>Convenção de no menclatura</h3>
+						<p>Usando a metodologia BEM como base</p>
+					</section>
+					<section>
+						<h3>Algumas regras são necessárias</h3>
+						<ul>
+							<li>Nomes são escritos em caixa baixa usando letras e números</li>
+							<li>Nomes compostos serão separados por hífen (-)</li>
+							<li>Nunca use IDs ou o elemento para estilização apenas classes.</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Blocos</h3>
+						<p><strong>Blocos são únicos por isso seus nomes também devem ser.</strong> Pode ser adicionado um prefixo para facilitar na hora da nomenclatura. A classe é o próprio nome.</p>
+						<pre><code class="css">
+.nome-do-bloco {...}
 
-<div class="main globalwidth"></div>
-
-<footer>
-  <div class="footer-inside globalwidth"></div>
-</footer>
+/* Exemplos */
+.menu { ... }
+.widget-facebook { ... }
 						</code></pre>
-					</div>
-					<div class="col col-40">
-						<pre><code class="css" data-trim contenteditable>
-.globalwidth {
-	width: 980px;
-	margin: 0 auto;
-	position: relative;
-	padding-left: 20px;
-	padding-right: 20px;
-	overflow: hidden;
-}
+					</section>
+					<section>
+						<h3>Elementos</h3>
+						<p>Seu nome deve ser único dentro do contexto do bloco, mas pode se repetir de de um bloco para outro. <strong>A classe é o nome do bloco seguido pelo nome do elemento separado por dois sublinhados (__).</strong></p>
+						<pre><code class="css">
+.nome-do-bloco__nome-do-elemento {...}
 
-.header-inside {
-	padding-top: 20px;
-	padding-bottom: 20px;
-	height: 260px;
-}
+/* Exemplos */
+.menu__item { ... }
+.menu__link { ... }
+.menu__sub-menu { ... }
+.menu__sub-item { ... }
 						</code></pre>
-					</div>
-				</section>
-				<section class="smacss">
-					<h1>Smacss</h1>
-					<img src="img/smacss.png" class="border-none" alt="">
-					<p>Yahoo! Mail</p>
-				</section>
-				<section class="smacss">
-					<h2>Base</h2>
-					<ul>
-						<li>Não utilizam seletores com classes ou ids</li>
-						<li>CSS Reset ou normalize.css</li>
-					</ul>
-				</section>
-				<section class="smacss layout cf">
-					<h2>Layout</h2>
-					<div class="col col-40">
-						<pre><code>
-#article {
-    float: left;
-}
+					</section>
+					<section>
+						<h3>Modificadores</h3>
+						<p>O nome do modificador é composto pelo nome do bloco ou elemento há que pertence. O nome do modificador é delimitado com um único sublinhado (_) ou dois hífens (--).</p>
+						<pre><code class="css">
+.bloco_modificador {}
+.bloco--modificador {}
 
-#sidebar {
-    float: right;
-}
 
-.l-flipped #article {
-    float: right;
-}
+/* Errado */
+#footer .menu { ... }
 
-.l-flipped #sidebar {
-    float: left;
-}
+/* Correto */
+.menu--footer { ... }
+.menu__item--first { ... }
 						</code></pre>
-					</div>
-					<div class="col col-20 center">
-						<img src="img/pr_arrow.png" class="border-none arrow" alt="">
-					</div>
-					<div class="col col-40 right">
-						<pre><code>
-#article {
-    width: 80%;
-    float: left;
-}
+					</section>
+					<section>
+						<img src="img/smacss.png" class="border-none" alt="">
+						<h3>Organização de arquivos</h3>
+						<p>Usando a metodologia SMACSS como base</p>
+					</section>
+					<section>
+						<h2>Cinco principais categorias:</h2> 
+						<ul>
+							<li>Base</li>
+							<li>Layout (.l)</li>
+							<li>Module</li>
+							<li>State (.is-)</li>
+							<li>Theme (placeholder)</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Siga uma estrutura lógica de nomenclatura</h2>
+						<pre><code class="css">
+/* Template */
+%template-name { }
+%template-name--modifier-name { }
+%template-name__sub-object { }
+%template-name__sub-object--modifier-name { }
 
-#sidebar {
-    width: 20%;
-    float: right;
-}
+/* Component */
+.component-name { }
+.component-name--modifier-name { }
+.component-name__sub-object { }
+.component-name__sub-object--modifier-name { }
 
-.l-fixed #article {
-    width: 600px;
-}
+/* Layout */
+.l-layout-method { }
+.grid { }
 
-.l-fixed #sidebar {
-    width: 200px;
-}
+/* State */
+.is-state-type { }
+
+/* Non-styled JavaScript Hooks */
+.js-action-name { }
 						</code></pre>
-					</div>
-				</section>
-				<section class="smacss">
-					<h2>Module</h2>
-					<div class="col col-60">
-						<pre><code>
-<div class="pod pod-constrained">...</div>
-<div class="pod pod-callout">...</div> 
-						</code></pre>
-					</div>
-					<div class="col col-40">
-						<pre><code>
-.pod { 
-    width: 100%; 
-} 
-.pod input[type=text] { 
-    width: 50%; 
-}
-.pod-constrained input[type=text] { 
-    width: 100%; 
-}
-
-.pod-callout { 
-    width: 200px; 
-}
-.pod-callout input[type=text] { 
-    width: 180px; 
-}
-						</code></pre>
-					</div>
-				</section>
-				<section class="smacss">
-					<h2>State</h2>
-					<ul>
-						<li><samp>.is-</samp></li>
-						<li><samp>.is-active</samp></li>
-						<li><samp>.is-collapsed</samp></li>
-						<li><samp>.is-current</samp></li>
-					</ul>
-				</section>
-				<section class="BEM">
-					<h1>BEM</h1>
-					<p>block, element, modifier</p>
-				</section>
-				<section class="bem">
-					<h3>Esqueça seus preconceitos com os caracteres duplos de hifen e sublinhado</h3>
-					<ul>
-						<li><samp>.formcontent</samp> (elemento pai)</li>
-						<li><samp>.formcontent__field</samp> (elemento filho)</li>
-						<li><samp>.formcontent__field--first</samp> (elemento filho modificado)</li>
-					</ul>
-				</section>
-				<section class="bem">
-					<h3>
-						Filesystem
-					</h3>
-					<img src="img/bem-filesystem.png" class="border-none" alt="">
+					</section>
 				</section>
 				<section>
-					<h1>Mundo real</h1>
-					<img src="img/ionic-angular-sass.png" class="border-none" alt="">
+					<section data-background="img/conclusao.jpg" data-background-repeat="no-repeat">
+						<h1 style="color:#fff">Conclusão</h1>
+					</section>
+					<section>
+						<p>
+							CSS não é apenas design visual. Não jogue fora as melhores práticas de programação só porque você está escrevendo CSS. Conceitos como OOP, DRY, etc. também se aplicam ao CSS.
+						</p>
+						<p>
+							A base de tudo é como você faz para organizar o seu código. Seja crítico com seu código e analize se é algo vai realmente te ajudar a tornar seu desenvolvimento mais fácil e sustentável a longo prazo.
+						</p>
+						<p>Não existe bala de prata, analize cada caso e veja o que é melhor para cada projeto.</p>
+					</section>
 				</section>
 			</div>
 		</div>
-
 		<script src="lib/js/head.min.js"></script>
 		<script src="js/reveal.js"></script>
 
